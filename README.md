@@ -2,7 +2,7 @@
 
 ## Motivation
 
-To jumpstart the application development process, I can use this template to start working on the core functionality. 
+To build an open source end-to-end portfolio management software which combines sophisticated risk analytics with comprehensive portfolio management tools, trading, operations, compliance and accounting tools on a single platform.
 
 ## CHALLENGES
 
@@ -33,6 +33,8 @@ GINN Wealth Management lets you see, understand and act in ways no one else can.
 Shift your business to be more data-driven with systematic alerts that identify clients and accounts requiring attention. Create rules to identify both issues and opportunities, allowing advisors to know which clients to contact and where to focus the conversation.
 
 ### How to Install 
+
+* Delivered as a hosted service, including the technical infrastructure, system administration and interfacing with data providers and industry utilities.
 
 * Download the code files
 
