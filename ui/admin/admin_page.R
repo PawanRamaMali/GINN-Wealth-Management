@@ -1,7 +1,11 @@
 library(shinydashboard)
 
+Visualize <-
+  source('./ui/admin/visualize_page.R', local = TRUE)
+
 Build <-
   source('./ui/admin/build_page.R', local = TRUE)
+
 
 About <-
   source('./ui/admin/about_page.R', local = TRUE)
@@ -47,6 +51,9 @@ fluidPage(
       ),
       id = "Front",
       
+      
+      # Visualize Page ---- 
+      Visualize$value,
       
       # Build Page ----
       Build$value,

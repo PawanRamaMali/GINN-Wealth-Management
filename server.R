@@ -6,5 +6,8 @@ server <- function(input, output, session) {
   # * Hashing Functionality ----
   source('./srv/hash.R', local = TRUE)
   
+  # * Visualize Functionality --- 
+  source('./srv/visualize.R', local = TRUE)
+  
   
 }
