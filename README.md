@@ -1,4 +1,4 @@
-# GINN-Wealth-Management
+# GINN Wealth Management
 
 ## Motivation
 
