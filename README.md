@@ -4,7 +4,7 @@
 
 To build an open source end-to-end portfolio management software which combines sophisticated risk analytics with comprehensive portfolio management tools, trading, operations, compliance and accounting tools on a single platform.
 
-## CHALLENGES
+## Challenges
 
 COVID-19 and current market volatility are dramatically changing the demands on wealth managers and financial advisors, in addition to the challenges they already face – higher client expectations, complex regulations, fee pressures and more.
 
