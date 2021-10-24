@@ -22,8 +22,16 @@ library(shinyanimate)
 library(shinyjs)
 library(shinyBS)
 
+# Explore
+
+#exportPattern("^[[:alpha:]]+")
+library(dplyr)
+library(httr)
+library(jsonlite)
+library(DT)
 
 
+# Visualize
 
 library(shiny)
 library(dplyr)
@@ -50,6 +58,7 @@ options(shiny.error = traceback)
 # * Load functions ----
 source('functions/greetings.R', local = TRUE)
 source('functions/navbarPageWithInputs.R', local = TRUE)
+source('functions/nse.R', local = TRUE)
 # * Load Login UI ----
 
 source('ui/login.R', local = TRUE)$value

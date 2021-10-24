@@ -9,5 +9,8 @@ server <- function(input, output, session) {
   # * Visualize Functionality --- 
   source('./srv/visualize.R', local = TRUE)
   
+  # * Explore Functionality --- 
+  source('./srv/explore_tab.R', local = TRUE)
+  
   
 }

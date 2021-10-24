@@ -1,4 +1,4 @@
-##  Tab Build New Test Case ----
+##  Tab Build ----
 
 tabPanel("Build",
          value = "Build",

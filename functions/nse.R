@@ -1,3 +1,6 @@
+# NSERequest ----
+# Send Request to NSE website to get the details
+
 NSERequest <- function(URL, timeout = 5) {
   
   # Get Cookies
@@ -37,15 +40,7 @@ NSERequest <- function(URL, timeout = 5) {
 }
 
 #' Tells if market is opened or not
-#'
-#' It returns status if market is opened or not
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' df <- MarketStatus()
-#' }
+
 
 MarketStatus <- function() {
   
@@ -66,17 +61,8 @@ MarketStatus <- function() {
 
 
 #' Holidays List of the current year
-#'
 #' It returns holidays calendar of the current year.
-#'
-#' @param type trading or clearing
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' df <- Holidays()
-#' }
+
 
 Holidays <- function(type="trading") {
   
@@ -102,17 +88,8 @@ Holidays <- function(type="trading") {
 
 
 #' Filing Information of financial results
-#'
 #' It returns filing Information of financial results
-#'
-#' @param period  "quarterly", "annual". By default it is "quarterly"
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' df <- FilingInfo()
-#' }
+
 
 FilingInfo <- function(period = "quarterly") {
   
@@ -135,17 +112,9 @@ FilingInfo <- function(period = "quarterly") {
 
 
 #' Extract Financial Results of a Company
-#'
 #' It returns financial results of a company
-#'
-#' @param Symbol Symbol of the stock you are looking for. For e.g. 'RELIANCE' for Reliance Industries Limited
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' df <- FinancialResults(Symbol = "ACC")
-#' }
+#' Symbol of the stock you are looking for. For e.g. 'RELIANCE' for Reliance Industries Limited
+
 
 FinancialResults <- function(Symbol) {
   
@@ -170,16 +139,7 @@ FinancialResults <- function(Symbol) {
 
 
 #' Upcoming events in NSE
-#'
 #' It returns upcoming events in the national stock exchange of India.
-#
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' df <- Events()
-#' }
 
 
 Events <- function() {
@@ -223,7 +183,7 @@ BlockDeal <- function() {
 
 }
 
-df <- BlockDeal()
+# df <- BlockDeal()
 
 # -------------------
 # Circular
@@ -247,19 +207,11 @@ Circular <- function() {
 
 }
 
-df <- Circular()
+# df <- Circular()
 
 #' Top Gainers
-#'
 #' It returns list of stocks which are top gainers in the NSE.
-#
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' df <- TopGainers()
-#' }
+
 
 TopGainers <- function() {
   
@@ -280,16 +232,8 @@ TopGainers <- function() {
 
 
 #' Top Losers
-#'
 #' It returns top losers in the national stock exchange of India.
-#
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' df <- TopLosers()
-#' }
+
 
 
 TopLosers <- function() {
@@ -311,18 +255,7 @@ TopLosers <- function() {
 }
 
 #' Most Active Stocks
-#'
 #' It returns most active stocks in the national stock exchange of India.
-#'
-#' @param Type "securities", "etf", "sme". By default it is securities
-#' @param OrderBy "volume", "value". By default it is volume
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' df <- MostActive(OrderBy = "value")
-#' }
 
 
 MostActive <- function(Type = "securities" , OrderBy = "volume") {
@@ -344,19 +277,9 @@ MostActive <- function(Type = "securities" , OrderBy = "volume") {
 }
 
 #' Option Chain
-#'
 #' It returns option chain.
-#'
-#' @param Symbol Stock's symbol. You can also indices like BANKNIFTY, NIFTY etc.
-#' @param Expiry Expiry. Try either "latest" or "all".
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-# OutDf <- OptionChain('ACC')
-# OutDf <- OptionChain('ACC', Expiry = "latest")
-#' }
+#' Stock's symbol. You can also indices like BANKNIFTY, NIFTY etc.
+
 
 OptionChain <- function(Symbol, Expiry = "all") {
   
@@ -395,16 +318,7 @@ OptionChain <- function(Symbol, Expiry = "all") {
 }
 
 #' Securities in F&O
-#'
 #' It returns stocks which are traded in Future and Options.
-#'
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' OutDf <- SecuritiesFO()
-#' }
 
 SecuritiesFO <- function() {
   
@@ -443,14 +357,7 @@ SecuritiesFO <- function() {
 #' Stocks in Nify50
 #'
 #' It returns information about stocks which are traded in Nifty 50.
-#'
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' OutDf <- NIFTY50()
-#' }
+
 
 NIFTY50 <- function() {
   
@@ -510,16 +417,8 @@ NIFTY50 <- function() {
 
 
 #' Indices in NSE
-#'
 #' It returns information about indices which are traded in NSE.
-#'
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' OutDf <- Indices()
-#' }
+
 
 Indices <- function() {
   
@@ -544,16 +443,8 @@ Indices <- function() {
 
 
 #' Fetch quote of a stock traded in NSE
-#'
 #' It returns information about a stock traded in NSE.
-#'
-#' @param Symbol Stock's symbol
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' QuoteDf <- GetQuote('acc')
-#' }
+
 
 
 GetQuote <- function(Symbol) {
@@ -591,19 +482,7 @@ GetQuote <- function(Symbol) {
 
 
 #' Fetch quote of a derivate traded in NSE
-#'
 #' It returns information about a derivate traded in NSE.
-#'
-#' @param Symbol Stock's symbol
-#' @param Type options or future
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' QuoteDf <- GetDerivativeQuote('banknifty')
-#' QuoteDf <- GetDerivativeQuote('banknifty', Type = "future")
-#' }
 
 GetDerivativeQuote <- function(Symbol, Type = "options") {
   
@@ -645,19 +524,10 @@ GetDerivativeQuote <- function(Symbol, Type = "options") {
 }
 
 #' Fetch historical data of a stock traded in NSE
-#'
 #' It returns historical information about a stock traded in NSE.
-#'
-#' @param Symbol Stock's symbol
-#' @param StartDate Starting Date (should be in %d-%m-%Y format like 20-07-2021)
-#' @param EndDate End Date (should be in %d-%m-%Y format like 24-07-2021)
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' HistoricalDf <- Historical('ACC', "01-01-2020", "24-07-2021")
-#' }
+#' Stock's symbol
+#' Starting Date (should be in %d-%m-%Y format like 20-07-2021)
+#' End Date (should be in %d-%m-%Y format like 24-07-2021)
 
 
 Historical <- function(Symbol, StartDate, EndDate) {
@@ -711,27 +581,15 @@ Historical <- function(Symbol, StartDate, EndDate) {
 }
 
 #' Fetch historical data of derivate traded in NSE
-#'
 #' It returns historical information about a derivative traded in NSE.
-#'
-#' @param Symbol Stock's symbol
-#' @param StartDate Starting Date (should be in %d-%m-%Y format like 20-07-2021)
-#' @param EndDate End Date (should be in %d-%m-%Y format like 24-07-2021)
-#' @param InstrumentType "options" or "futures"
-#' @param ExpiryDate Expiry Date (should be in %d-%m-%Y format like 29-07-2021)
-#' @param StrikePrice Strike Price
-#' @param OptionType Option Type
-#'
-#' @export
-#' @author Deepanshu Bhalla
-#' @examples
-#' \dontrun{
-#' HistoricalDf <- HistoricalDerivate(Symbol = 'ITC',
-#' StartDate = "01-07-2021",
-#' EndDate = "24-07-2021",
-#' InstrumentType = "options",
-#' ExpiryDate = "29-07-2021")
-#' }
+#' Stock's symbol
+#' Starting Date (should be in %d-%m-%Y format like 20-07-2021)
+#' End Date (should be in %d-%m-%Y format like 24-07-2021)
+#' "options" or "futures"
+#' Expiry Date (should be in %d-%m-%Y format like 29-07-2021)
+#' Strike Price
+#' Option Type
+
 
 HistoricalDerivate <- function(Symbol,
                                StartDate,
