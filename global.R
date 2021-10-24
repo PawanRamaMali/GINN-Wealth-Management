@@ -22,6 +22,24 @@ library(shinyanimate)
 library(shinyjs)
 library(shinyBS)
 
+
+
+
+library(shiny)
+library(dplyr)
+library(shinydashboard)
+library(ggplot2)
+library(PortfolioAnalytics)
+library(quantmod)
+library(PerformanceAnalytics)
+library(zoo)
+library(ROI)
+library(ggplot2)
+library(reshape2)
+library(scales)
+library(magrittr)
+
+
 ## Setting Upload Size 
 options(shiny.maxRequestSize=30*1024^2)
 options(shiny.error = traceback)
@@ -41,3 +59,6 @@ Logged = FALSE
 
 # LOAD DATASETS ----
 
+#---- Load data -------------------------------------------
+
+source("data/load_data.R")
